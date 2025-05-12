@@ -6,4 +6,4 @@
 ## 5.点击Add variable添加环境变量
 ## 6.DOMAIN➡你的域名
 ## 7.PORT ➡端口（自己随便填写别人没用过的端口，如果出现503就换一个）
-## 8.UUID➡生成的[uuid](https://1024tools.com/uuid）
+## 8.UUID➡生成的[uuid]https://1024tools.com/uuid

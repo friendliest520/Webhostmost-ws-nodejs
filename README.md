@@ -1,5 +1,5 @@
 # 操作步骤
-## 1.在public_html中分别建立app.js和package.json,然后把对应代码复制进去保存
+## 1.在`public_html`中分别建立app.js和package.json,然后把对应代码复制进去保存
 ## 2.回到面板点击左栏 Website Management➡NodeJs APP➡Create application➡CREATE先看图
 ## 3.Node.js version➡版本选择最新
 ## 4.Application root➡domains/xxx.xxxx.com/public_html (替换自己的完整域名)切记不要填写错误

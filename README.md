@@ -1,4 +1,4 @@
-<h1 align="center">操作步骤</h1>
+# 操作步骤
 ## 1.回到面板点击左栏 Website Management➡NodeJs APP➡Create application➡CREATE先看图
 ## 2.Node.js version➡版本选择最新
 ## 3.Application root➡domains/xxx.xxxx.com/public_html (替换自己的完整域名)切记不要填写错误

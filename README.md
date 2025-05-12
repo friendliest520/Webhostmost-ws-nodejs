@@ -4,9 +4,8 @@
 ## 3.`Node.js version`➡版本选择最新
 ## 4.`Application root`➡`domains/xxx.xxxx.com/public_html` (替换自己的完整域名)切记不要填写错误
 ## 5.`Application startup file`➡`app.js`
-## 6.点击`Add variable`
--添加环境变量
-
+## 6.点击`Add variable`添加环境变量
+- 环境变量
   - 6.1 `DOMAIN`➡你的域名
   - 6.2 `PORT` ➡端口（自己随便填写别人没用过的端口，如果出现503就换一个）
   - 6.3 `UUID`➡生成的[UUID](https://1024tools.com/uuid)

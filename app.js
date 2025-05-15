@@ -36,9 +36,13 @@ function createHttpServer() {
             const base64Content = Buffer.from(vlessURL).toString('base64');
             res.writeHead(200, { 'Content-Type': 'text/plain' });
             res.end(base64Content + '\n');
+        } else if (req.url === '/other-path') {
+            // 处理其他路径请求，返回503状态码，重新分配端口
+            res.writeHead(503, contentType);
+            res.end('Service Unavailable\n');
         } else {
             // 处理其他路径请求，返回 404 状态码
-            res.writeHead(404, { 'Content-Type': 'text/plain' });
+            res.writeHead(404, contentType);
             res.end('Not Found\n');
         }
     });

@@ -7,7 +7,9 @@
 ## 6.点击`Add variable`添加环境变量
 - 环境变量
   - 6.1 `DOMAIN`➡你的域名
-  - 6.2 `PORT` ➡端口（自己随便填写别人没用过的端口，如果出现503就换一个）
+  - 6.2 `PORT` ➡端口（自己随便填写别人没用过的端口，如果出现503就换一个），不输就用的随机端口
   - 6.3 `UUID`➡生成的[UUID](https://1024tools.com/uuid)
 ## 7.点击`CREATE`创建
 ## 8.点击`RUN NPM INSTALL` 然后点`RUN JS SCRIPT`
+## 9.点击`open`
+## 10.域名/uuid 查看具体信息

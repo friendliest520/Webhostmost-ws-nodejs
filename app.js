@@ -32,7 +32,7 @@ function createHttpServer() {
             res.end('Hello, World\n');
         } else if (req.url === `/${UUID}`) {
             // 处理 UUID 路径请求，生成 vless 协议的 URL 并返回 Base64 编码
-            const vlessURL = `vless://${UUID}@${DOMAIN}:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#${NAME}`;
+            const vlessURL = `vless://${UUID}@${DOMAIN}:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#v1-ws-tls-${NAME}`;
             const base64Content = Buffer.from(vlessURL).toString('base64');
             res.writeHead(200, { 'Content-Type': 'text/plain' });
             res.end(base64Content + '\n');

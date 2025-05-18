@@ -2,7 +2,7 @@
 ## 1.在`public_html`文件中分别建立`app.js`和`package.json`,然后把对应代码复制进去保存(也可以直接上传到`public_html`文件来中，建议上传会快些)
 ## 2.回到面板点击左栏 `Website Management`➡`NodeJs APP`➡`Create application`➡`CREAT`E先看图
 ## 3.`Node.js version`➡版本选择最新
-## 4.`Application root`➡`public_html` (xxx.xxxx.com替换自己的完整域名)切记不要填写错误，下一排会显示出域名
+## 4.`Application root`➡`public_html` 
 ## 5.`Application startup file`➡`app.js`
 ## 6.点击`Add variable`添加环境变量
 - 环境变量

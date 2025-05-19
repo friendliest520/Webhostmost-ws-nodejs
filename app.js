@@ -21,7 +21,7 @@ const NEZHA_PORT = process.env.NEZHA_PORT || '443'; // 哪吒监控服务器端�
 const NEZHA_KEY = process.env.NEZHA_KEY || ''; // 哪吒监控密钥
 const DOMAIN = process.env.DOMAIN || ''; // 项目域名或反代域名
 const NAME = process.env.NAME || 'webhostmost-GCP'; // 项目名称
-const port = process.env.PORT || 0; // HTTP 服务器端口，如果未设置则使用随机端口
+const port = process.env.PORT || Math.floor(Math.random() * (65000 - 10000 + 1)) + 10000; // HTTP 服务器端口，如果未设置则使用随机端口范围10000至65000
 
 // 创建 HTTP 服务器
 function createHttpServer() {

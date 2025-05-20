@@ -38,8 +38,16 @@ function createHttpServer() {
             res.end(base64Content + '\n');
         } else if (req.url === '/other-path') {
             // 处理其他路径请求，返回503状态码，重新分配端口
+            const MIN_PORT = 10000;
+            const MAX_PORT = 65000;
+        
             res.writeHead(503, contentType);
-            res.end('Service Unavailable\n');
+        
+            // 获取合法的环境端口或随机生成一个可用端口
+            let port = parseInt(process.env.PORT, 10);
+            if (isNaN(port) || port < MIN_PORT || port > MAX_PORT) {
+                port = Math.floor(Math.random() * (MAX_PORT - MIN_PORT + 1)) + MIN_PORT;
+            }
         } else {
             // 处理其他路径请求，返回 404 状态码
             res.writeHead(404, contentType);

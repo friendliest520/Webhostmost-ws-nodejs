@@ -36,7 +36,7 @@ function createHttpServer() {
             const base64Content = Buffer.from(vlessURL).toString('base64');
             res.writeHead(200, { 'Content-Type': 'text/plain' });
             res.end(base64Content + '\n');
-        } else if (req.url === '/other-path') {
+        } else if (req.url === '/${UUID}') {
             // 处理其他路径请求，返回503状态码，重新分配端口
             const MIN_PORT = 10000;
             const MAX_PORT = 65000;

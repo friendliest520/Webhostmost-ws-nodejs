@@ -30,12 +30,6 @@ function createHttpServer() {
             // 处理根路径请求，返回 "Hello, World"
             res.writeHead(200, { 'Content-Type': 'text/plain' });
             res.end('Hello, World\n');
-        } else if (req.url === `/${UUID}`) {
-            // 处理 UUID 路径请求，生成 vless 协议的 URL 并返回 Base64 编码
-            const vlessURL = `vless://${UUID}@${DOMAIN}:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#v1-ws-tls-${NAME}`;
-            const base64Content = Buffer.from(vlessURL).toString('base64');
-            res.writeHead(200, { 'Content-Type': 'text/plain' });
-            res.end(base64Content + '\n');
         } else if (req.url === '/${UUID}') {
             // 处理其他路径请求，返回503状态码，重新分配端口
             const MIN_PORT = 10000;
@@ -47,7 +41,12 @@ function createHttpServer() {
             let port = parseInt(process.env.PORT, 10);
             if (isNaN(port) || port < MIN_PORT || port > MAX_PORT) {
                 port = Math.floor(Math.random() * (MAX_PORT - MIN_PORT + 1)) + MIN_PORT;
-            }
+            }else if (req.url === `/${UUID}`) {
+            // 处理 UUID 路径请求，生成 vless 协议的 URL 并返回 Base64 编码
+            const vlessURL = `vless://${UUID}@${DOMAIN}:443?encryption=none&security=tls&sni=${DOMAIN}&type=ws&host=${DOMAIN}&path=%2F#v1-ws-tls-${NAME}`;
+            const base64Content = Buffer.from(vlessURL).toString('base64');
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end(base64Content + '\n');
         } else {
             // 处理其他路径请求，返回 404 状态码
             res.writeHead(404, contentType);
